@@ -1,0 +1,60 @@
+﻿@model ProfileMVCProject.Models.Profile
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Profile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PersonId" class="control-label"></label>
+                <input asp-for="PersonId" class="form-control" />
+                <span asp-validation-for="PersonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                @Html.EditorFor(m => m.Name, new { @class = "form-control" })
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                @Html.EditorFor(m => m.age, new { @class = "form-control" })
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qualification" class="control-label"></label>
+                @Html.EditorFor(m => m.qualification, new { @class = "form-control" })
+                <span asp-validation-for="qualification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsEmployed" class="control-label"></label>
+                @Html.EditorFor(m => m.IsEmployed, new { @class = "form-control" })
+                <span asp-validation-for="IsEmployed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoticePeriod" class="control-label"></label>
+                @Html.EditorFor(m => m.NoticePeriod, new { @class = "form-control" })
+                <span asp-validation-for="NoticePeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentCTC" class="control-label"></label>
+                @Html.EditorFor(m => m.CurrentCTC, new { @class = "form-control" })
+                <span asp-validation-for="CurrentCTC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
